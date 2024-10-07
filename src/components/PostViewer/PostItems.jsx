@@ -19,9 +19,8 @@ function PostItems(props) {
 
     return (
         <li>
-            <h5>{post.id}</h5>
-            <h4>{post.title}</h4>
             <h4>{userName}</h4>
+            <h4>{post.title}</h4>
             <p>{post.content}</p>
         </li>
     )

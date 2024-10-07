@@ -1,5 +1,6 @@
 import { usePosts } from "../../context/PostProvider";
 import PostItems from "./PostItems";
+import './PostViewer.css'
 
 function PostViewer() {
 
