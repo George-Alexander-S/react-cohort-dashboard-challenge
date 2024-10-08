@@ -25,7 +25,7 @@ function PostItems(props) {
                 {userName}
                 </Link>
                 </h4>
-            <h4>{post.title}</h4>
+            <h4><Link to={`/post/${post.id}`}>{post.title}</Link></h4>
             <p>{post.content}</p>
             <Commenter postId={post.id}/>
         </li>
