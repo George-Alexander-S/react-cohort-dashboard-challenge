@@ -4,7 +4,7 @@ import './PostViewer.css'
 
 function PostViewer() {
 
-    const {posts, setPosts} = usePosts();
+    const {posts} = usePosts();
     console.log(posts)
 
     return (

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Commenter from "../Commenter/Commenter";
+import { Link } from "react-router-dom";
 
 function PostItems(props) {
 
@@ -20,7 +21,10 @@ function PostItems(props) {
 
     return (
         <li className="li-postviewer">
-            <h4>{userName}</h4>
+            <h4><Link to={`/profile/${post.contactId}`}>
+                {userName}
+                </Link>
+                </h4>
             <h4>{post.title}</h4>
             <p>{post.content}</p>
             <Commenter postId={post.id}/>
