@@ -26,7 +26,7 @@ function Poster() {
     const [formData, setFormData] = useState({
         title: "",
         content: "",
-        contactId: 16
+        contactId: 1
     })
 
     const handleChange = (event) => {

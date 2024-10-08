@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
-import Commenter from "../Commenter/Commenter";
 
-function PostItems(props) {
-
-    const {post} = props
+function CommentItems(props) {
+    const {comment} = props
 
     const userUrl = 'https://boolean-uk-api-server.fly.dev/George-Alexander-S/contact'
 
@@ -11,7 +9,7 @@ function PostItems(props) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch(`${userUrl}/${post.contactId}`);
+            const response = await fetch(`${userUrl}/${comment.contactId}`);
             const jsonData = await response.json();
             setUserName(`${jsonData.firstName} ${jsonData.lastName}`);
         };
@@ -20,12 +18,10 @@ function PostItems(props) {
 
     return (
         <li>
-            <h4>{userName}</h4>
-            <h4>{post.title}</h4>
-            <p>{post.content}</p>
-            <Commenter postId={post.id}/>
+            <h5>{userName}</h5>
+            <p>{comment.content}</p>
         </li>
     )
 }
 
-export default PostItems
+export default CommentItems
