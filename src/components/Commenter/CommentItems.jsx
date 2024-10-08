@@ -17,7 +17,7 @@ function CommentItems(props) {
     }, []);
 
     return (
-        <li>
+        <li className="li-postviewer">
             <h5>{userName}</h5>
             <p>{comment.content}</p>
         </li>
