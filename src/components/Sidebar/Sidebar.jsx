@@ -9,13 +9,13 @@ function Sidebar() {
     return (
         <nav>
             <ul>
-                <li>
+                <li className='sidebar-list'>
                     <NavLink to="/">
                         <img src={HomeIcon} className='sidebar-icon'/>
                         Home
                     </NavLink>
                 </li>
-                <li>
+                <li className='sidebar-list'>
                     <NavLink to="/profile">
                     <img src={ProfileIcon} className='sidebar-icon'/>
                         Profile
