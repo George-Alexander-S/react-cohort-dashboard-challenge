@@ -19,7 +19,7 @@ function PostItems(props) {
     }, []);
 
     return (
-        <li>
+        <li className="li-postviewer">
             <h4>{userName}</h4>
             <h4>{post.title}</h4>
             <p>{post.content}</p>
