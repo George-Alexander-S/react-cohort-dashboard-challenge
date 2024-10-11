@@ -32,7 +32,7 @@ function Commenter({ postId }) {
             body: JSON.stringify(data)
         };
         await fetch(commentUrl, settings);
-        await getComments(); // Sorts rendering new comments immedialtely, just like the getPosts in the Poster.jsx comp
+        await getComments();
     };
 
     const [formData, setFormData] = useState({

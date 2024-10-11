@@ -9,19 +9,26 @@ function PostItems(props) {
     const userUrl = 'https://boolean-uk-api-server.fly.dev/George-Alexander-S/contact'
 
     const [userName, setUserName] = useState();
+    const [circleColour, setCircleColour] = useState("#ffff")
+
 
     useEffect(() => {
         const fetchData = async () => {
             const response = await fetch(`${userUrl}/${post.contactId}`);
             const jsonData = await response.json();
-            setUserName(`${jsonData.firstName} ${jsonData.lastName}`);
+            setUserName(`${jsonData.firstName.charAt(0)}${jsonData.lastName.charAt(0)}`);
+            setCircleColour(jsonData.favouriteColour);
         };
         fetchData();
     }, []);
 
+    useEffect(() => {
+        console.log(circleColour);
+    }, [])
+
     return (
         <li className="li-postviewer">
-            <h4><Link to={`/profile/${post.contactId}`}>
+            <h4 style={{backgroundColor: circleColour}} className="username"><Link to={`/profile/${post.contactId}`}>
                 {userName}
                 </Link>
                 </h4>
