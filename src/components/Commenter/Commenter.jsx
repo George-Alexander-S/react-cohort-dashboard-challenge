@@ -57,7 +57,7 @@ function Commenter({ postId }) {
     return (
         <>
             <ul>
-                {displayedComments?.map((comment) => (
+                {displayedComments?.toReversed().map((comment) => (
                     <CommentItems
                     key={comment.id}
                     comment={comment}

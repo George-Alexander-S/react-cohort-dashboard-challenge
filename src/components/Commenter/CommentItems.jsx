@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function CommentItems(props) {
     const {comment} = props
@@ -18,7 +19,9 @@ function CommentItems(props) {
 
     return (
         <li className="li-postviewer">
-            <h5>{userName}</h5>
+            <h5><Link to={`/profile/${comment.contactId}`}>
+                {userName}
+                </Link></h5>
             <p>{comment.content}</p>
         </li>
     )

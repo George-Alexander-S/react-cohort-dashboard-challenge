@@ -9,7 +9,7 @@ function PostViewer() {
 
     return (
         <ul>
-            {posts.map((post) => (
+            {posts.toReversed().map((post) => (
                 <PostItems
                 key={post.id}
                 post= {post}
