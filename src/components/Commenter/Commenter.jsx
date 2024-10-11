@@ -18,7 +18,7 @@ function Commenter({ postId }) {
     useEffect(() => {
         getComments();
         console.log(comments)
-    }, [])
+    }, [postId])
 
     const makeComment = async (data) => {
         const commentUrl = `https://boolean-uk-api-server.fly.dev/George-Alexander-S/post/${postId}/comment`

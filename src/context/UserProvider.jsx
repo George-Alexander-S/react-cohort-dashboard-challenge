@@ -13,10 +13,6 @@ export const UserProvider = ({children}) => {
         setUser(jsonData)
     };
 
-    useEffect(() => {
-        getUser(1);
-    }, [])
-
     return (
         <UserContext.Provider value={{user, getUser}}>
             {children}
