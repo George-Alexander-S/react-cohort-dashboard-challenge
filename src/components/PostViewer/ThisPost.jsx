@@ -10,13 +10,13 @@ function ThisPost() {
 
     useEffect(() => {
         getPostById(postId);
-    }, [getPostById, postId]);
+    }, [postId]);
 
     return (
         <div className="this-post">
             <h2>{post.title}</h2>
             <p>{post.content}</p>
-            <Commenter postId={post.id}/>
+            <Commenter postId={Number(postId)}/>
         </div>
     )
 

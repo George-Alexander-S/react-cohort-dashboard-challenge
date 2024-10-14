@@ -8,6 +8,7 @@ import UserProfile from '../Profile/Profile';
 import { UserProvider } from '../../context/UserProvider';
 import { Route, Routes } from 'react-router-dom';
 import ThisPost from '../PostViewer/ThisPost';
+import PrimeUser from '../Profile/PrimeUser';
 
 function Menu() {
     return (
@@ -25,6 +26,7 @@ function Menu() {
                             <Route path="/" element={<><Poster /><PostViewer /></>} />
                             <Route path="/profile/:userId" element={<UserProfile/>} />
                             <Route path="/post/:postId" element={<ThisPost/>}/>
+                            <Route path="/primeUser/:userId" element={<PrimeUser/>}/>
                         </Routes>
                     </div>
                 </div>

@@ -17,7 +17,7 @@ function Sidebar() {
                         </NavLink>
                     </li>
                     <li className='sidebar-list'>
-                        <NavLink to="/profile/1">
+                        <NavLink to="/primeUser/1">
                             <img src={ProfileIcon} className='sidebar-icon' />
                             Profile
                         </NavLink>

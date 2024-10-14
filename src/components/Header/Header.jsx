@@ -7,7 +7,7 @@ function Header () {
     return (
         <div className='header'>
             <img src={HeaderLogo} className='header-logo'/>
-            <NavLink to="/profile/1">
+            <NavLink className={({isActive}) => isActive ? "active-icon" : ""} to="/primeUser/1">
             <img src={ProfileIcon} />
             </NavLink>
 

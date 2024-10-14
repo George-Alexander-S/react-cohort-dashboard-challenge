@@ -52,12 +52,12 @@ function Commenter({ postId }) {
 
     const [showAll, setShowAll] = useState(false);
     const maxComments = 3;
-    const displayedComments = showAll ? comments : comments?.slice(0, maxComments)
+    const displayedComments = showAll ? comments.toReversed() : comments?.toReversed().slice(0, maxComments)
 
     return (
         <>
             <ul>
-                {displayedComments?.toReversed().map((comment) => (
+                {displayedComments?.map((comment) => (
                     <CommentItems
                     key={comment.id}
                     comment={comment}

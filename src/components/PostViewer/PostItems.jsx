@@ -28,9 +28,9 @@ function PostItems(props) {
 
     return (
         <li className="li-postviewer">
-            <h4 style={{backgroundColor: circleColour}} className="username"><Link to={`/profile/${post.contactId}`}>
-                {userName}
-                </Link>
+            <h4 style={{backgroundColor: circleColour}} className="username"><Link to={post.contactId === 1 ? "/primeUser/1" : `/profile/${post.contactId}`}>
+        {userName}
+    </Link>
                 </h4>
             <h4><Link to={`/post/${post.id}`}>{post.title}</Link></h4>
             <p>{post.content}</p>

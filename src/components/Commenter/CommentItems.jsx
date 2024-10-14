@@ -19,9 +19,9 @@ function CommentItems(props) {
 
     return (
         <li className="li-postviewer">
-            <h5><Link to={`/profile/${comment.contactId}`}>
-                {userName}
-                </Link></h5>
+            <h5><Link to={comment.contactId === 1 ? "/primeUser/1" : `/profile/${comment.contactId}`}>
+        {userName}
+    </Link></h5>
             <p>{comment.content}</p>
         </li>
     )
